@@ -6,7 +6,12 @@
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    background: black;
+    background: linear-gradient(
+        to bottom,
+        rgba(65, 0, 63, 1),
+        rgba(0, 0, 0, 1)
+
+    );
     color: white;
     line-height: 1.6;
     font-size: 22px;
@@ -44,6 +49,9 @@ h1, h2 {
     font-size: 30px;
 }
 
+.imgfilter {
+    filter: drop-shadow(0px 20px 40px purple);
+}
 .header a {
     color: white;
     text-decoration: none;
@@ -94,6 +102,7 @@ a:hover {
     padding: 40px;
     margin: 50px;
     font-size: 24px;
+    filter: drop-shadow(0px 20px 40px purple);
 }
 
 ul {
@@ -161,4 +170,170 @@ a:hover {
     background-image: url('../images/parksbackgroundimage.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.sixwaygrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    
+
+}
+.sixwaygrid img {
+        width: 600px;
+}
+
+
+.BGColor2 {
+    background: linear-gradient(
+        to bottom,
+        rgb(62, 7, 92),
+        rgb(53, 0, 30)
+    )
+}
+
+.park-options {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.park-options h2 {
+    text-align:center;
+}
+
+.park {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Media Query*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 8px;
+        font-size: 18px;
+        overflow: visible;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .header {
+        width: 94%;
+        max-width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 8px;
+        word-spacing: normal;
+        margin: 12px auto 20px;
+        padding: 12px 16px;
+        font-size: 22px;
+    }
+
+    .main-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .text-containter {
+        flex: 1 1 auto;
+        min-width: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .sidebar {
+        width: 280px;
+        min-width: 0;
+        margin: 20px 10px;
+        padding: 22px;
+        justify-content: flex-start;
+        font-size: 18px;
+    }
+    .sidebar img{
+        width: 95%;
+    }
+
+    .main-content img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .funfacts,
+    .sixwaygrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+    .sixwaygrid img {
+        width: 300px;
+    }
+    .sixwaygrid p {
+    font-size: 10px;
+    }
+    .park-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 16px;
+        
+    }
+
+    .park {
+        flex: 1 1 220px;
+        min-width: 0;
+        margin: 10px;
+        
+    }
+
+    .park img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        min-height: 140px;
+        height: auto;
+    }
+
+    .btn {
+        min-height: 44px;
+        padding: 10px 22px;
+        font-size: 19px;
+    }
+
+    .titlecard {
+        font-size: 40px;
+        text-align: center;
+    }
 }
